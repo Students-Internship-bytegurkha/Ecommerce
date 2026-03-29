@@ -3,6 +3,7 @@ import React from 'react'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
 
+
 const Navbar = () => {
   return (
     <div className='bg-gray-300 h-[10%] w-full flex justify-between  items-center px-8  rounded-md'>
