@@ -1,12 +1,13 @@
 
 import './App.css'
+import Productlist from './pages/Productlist'
 
 function App() {
 
 
   return (
-   <div className=''>
-
+   <div>
+       <Productlist/>
    </div>
   )
 }
