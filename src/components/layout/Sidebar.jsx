@@ -1,5 +1,6 @@
-import { Box, CardSim, ChartBar, Eye, Headset, IdCard, LayoutDashboard, Lock, MessageCircle, Moon, Settings, SidebarIcon, Store, Sun, UserCircle, Wallet } from 'lucide-react'
+import {  Boxes,  ChartBar, Eye, Headset, IdCard, LayoutDashboard, LayoutDashboardIcon, Lock, MessageCircle, Moon, Settings, SidebarIcon, Store, Sun, UserCircle, Wallet } from 'lucide-react'
 import React from 'react'
+import SidebarItem from '../ui/SidebarItem'
 
 const Sidebar = () => {
   return (
@@ -9,10 +10,9 @@ const Sidebar = () => {
    <hr className='mt-3 text-gray-300'/>
 
    <div className='flex flex-col gap-3  mt-2 text-xs p-3'>
-    <div className='flex gap-2 hover:bg-gray-200 w-38   h-7 rounded-md items-center '>
-        <LayoutDashboard size={16}/><p>Dashboard</p></div>
+   <SidebarItem  icon={LayoutDashboardIcon} label="Dashboard"/>
 <div className='flex gap-2 h-7 rounded-md items-center  hover:bg-gray-200 ' > <UserCircle size={16}/>    <select ><option>Customers</option></select></div>
-      <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><Box size={16}/><p>Products</p></div>
+ <SidebarItem label="Products" icon={Boxes}/>
        <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '>
         <Store size={16}/>
        <p>Shop</p>
@@ -21,10 +21,10 @@ const Sidebar = () => {
              <p className='text-gray-400'><Lock size={14}/></p></div>
         <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><Wallet size={16}/><select><option>Wallet</option></select></div>
          <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><IdCard size={16}/><select><option>Payment</option></select></div>
-          <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><ChartBar size={16}/><p>Analytic</p></div>
+         <SidebarItem label="Analytics" icon={ChartBar}/>
           <hr className='text-gray-200'/>
-           <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><Headset size={16}/><p>Support</p></div>
-            <div className='flex gap-2  hover:bg-gray-200    h-7 rounded-md items-center '><Settings size={16}/><p>Setting</p></div>
+      <SidebarItem label="Support" icon={Headset}/>
+           <SidebarItem label="Setting" icon={Settings}/>
    </div>
 
    <div className='flex flex-col justify-end   gap-2 px-4 mt-8'> 

@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/layout/Navbar'
-import Sidebar from '../components/layout/Sidebar'
 import RightDashboard from '../components/layout/RightDashboard'
-import Productlist from './Productlist'
+
+
+import Productlist from './Productlist';
 
 
 const Homepage = () => {
+  const[search,setSearch]=useState("");
   return (
     <div className='bg-gray-100 w-screen h-screen  p-3'>
        
-       <Navbar/>
+       <Navbar search={search} setSearch={setSearch}/>
 
       <div className='flex'>
-        <Productlist/>
+       <Productlist/>
+       <RightDashboard/>
+       
 
-    <RightDashboard/>
 
       </div>
       

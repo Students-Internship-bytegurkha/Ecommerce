@@ -4,7 +4,7 @@ import Input from '../ui/Input'
 import Button from '../ui/Button'
 
 
-const Navbar = () => {
+const Navbar = ({setSearch,search}) => {
   return (
     <div className='bg-gray-300 h-[10%] w-full flex justify-between  items-center px-8  rounded-md'>
 
@@ -13,7 +13,9 @@ const Navbar = () => {
 
        <div className='flex gap-3'>
          <div className='rounded-2xl bg-gray-50 flex w-50 h-9 items-center px-2'>
-          <SearchIcon  size={18} className='text-gray-500'/>  <Input/>
+          <SearchIcon  size={18} className='text-gray-500'/> 
+          <Input placeholder='search products...' onChange={(e)=>setSearch(e.target.value)}
+          value={search} className='outline-0 p-2'/>
         </div>
 
         <Button >Create</Button>
